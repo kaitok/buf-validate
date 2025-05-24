@@ -1,11 +1,16 @@
-# buf-validate
-User-defined rule validation of proto files using protovalidate with Buf
+# go-grpc-api
+- Go
+- chi
+- gRPC
+- proto validate
 
-- Coge generate: [Buf](https://buf.build/docs/generate/tutorial/#1-define-a-module)
-- Validation: [protovalidate](https://github.com/bufbuild/protovalidate)
 
-
-## Generate
+## Generate Code from protofile
 ```
 buf generate
+```
+
+## Run
+```
+go run ./cmd/main.go
 ```

@@ -1,8 +1,17 @@
 version: v2
+managed:
+  enabled: true
+  override:
+    - file_option: go_package_prefix
+      value: go-grpc-api/tools/grpc
 clean: true
 plugins:
-  - local: protoc-gen-go
-    out: gen/go
+  - remote: buf.build/protocolbuffers/go:v1.36.5
+    out: tools/grpc
+    opt:
+      - paths=source_relative
+  - remote: buf.build/bufbuild/connect-go
+    out: tools/grpc
     opt: paths=source_relative
 inputs:
   - directory: proto
