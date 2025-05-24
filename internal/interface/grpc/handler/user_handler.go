@@ -5,9 +5,9 @@ import (
 
 	"github.com/bufbuild/connect-go"
 
-	"buf-validate-example/internal/application/service"
-	"buf-validate-example/internal/infrastructure/repository"
-	userpb "buf-validate-example/tools/grpc/buf_validate_example/v1"
+	"go-grpc-api/internal/application/service"
+	"go-grpc-api/internal/infrastructure/repository"
+	userpb "go-grpc-api/tools/grpc/go_grpc_api/v1"
 )
 
 var getUserUsecase = service.GetUserUsecase{

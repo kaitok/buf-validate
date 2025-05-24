@@ -7,8 +7,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"buf-validate-example/internal/interface/grpc/handler"
-	grpc "buf-validate-example/tools/grpc/buf_validate_example/v1/buf_validate_examplev1connect"
+	"go-grpc-api/internal/interface/grpc/handler"
+	grpc "go-grpc-api/tools/grpc/go_grpc_api/v1/go_grpc_apiv1connect"
 )
 
 func main() {

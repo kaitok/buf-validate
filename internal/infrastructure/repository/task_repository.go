@@ -1,6 +1,6 @@
 package repository
 
-import "buf-validate-example/internal/domain/entity"
+import "go-grpc-api/internal/domain/entity"
 
 type TaskRepositoryImpl struct{}
 

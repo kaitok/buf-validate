@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package buf_validate_example.v1;
+package go_grpc_api.v1;
 
 import "google/protobuf/timestamp.proto";
 

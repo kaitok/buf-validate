@@ -1,8 +1,8 @@
 package service
 
 import (
-	"buf-validate-example/internal/domain/entity"
-	"buf-validate-example/internal/domain/repository"
+	"go-grpc-api/internal/domain/entity"
+	"go-grpc-api/internal/domain/repository"
 )
 
 type GetTaskUsecase struct {

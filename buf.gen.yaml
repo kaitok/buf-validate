@@ -3,7 +3,7 @@ managed:
   enabled: true
   override:
     - file_option: go_package_prefix
-      value: buf-validate-example/tools/grpc
+      value: go-grpc-api/tools/grpc
 clean: true
 plugins:
   - remote: buf.build/protocolbuffers/go:v1.36.5

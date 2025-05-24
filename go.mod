@@ -1,4 +1,4 @@
-module buf-validate-example
+module go-grpc-api
 
 go 1.24
 

@@ -1,10 +1,10 @@
 package handler
 
 import (
-	"buf-validate-example/internal/application/service"
-	"buf-validate-example/internal/infrastructure/repository"
-	taskpb "buf-validate-example/tools/grpc/buf_validate_example/v1"
 	"context"
+	"go-grpc-api/internal/application/service"
+	"go-grpc-api/internal/infrastructure/repository"
+	taskpb "go-grpc-api/tools/grpc/go_grpc_api/v1"
 
 	"github.com/bufbuild/connect-go"
 )
