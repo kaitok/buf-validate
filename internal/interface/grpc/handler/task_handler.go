@@ -30,6 +30,5 @@ func (s *TaskServiceServer) GetTaskByUser(ctx context.Context, req *connect.Requ
 }
 
 func (s *TaskServiceServer) CreateTask(ctx context.Context, req *connect.Request[taskpb.CreateTaskRequest]) (*connect.Response[taskpb.CreateTaskResponse], error) {
-	// 実装例: 空のレスポンスを返す
 	return connect.NewResponse(&taskpb.CreateTaskResponse{}), nil
 }
