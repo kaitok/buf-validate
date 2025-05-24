@@ -5,6 +5,9 @@ import (
 	"go-grpc-api/internal/application/service"
 	"go-grpc-api/internal/infrastructure/repository"
 	taskpb "go-grpc-api/tools/grpc/go_grpc_api/v1"
+	grpc "go-grpc-api/tools/grpc/go_grpc_api/v1/go_grpc_apiv1connect"
+
+	"github.com/go-chi/chi/v5"
 
 	"github.com/bufbuild/connect-go"
 )
@@ -31,4 +34,9 @@ func (s *TaskServiceServer) GetTaskByUser(ctx context.Context, req *connect.Requ
 
 func (s *TaskServiceServer) CreateTask(ctx context.Context, req *connect.Request[taskpb.CreateTaskRequest]) (*connect.Response[taskpb.CreateTaskResponse], error) {
 	return connect.NewResponse(&taskpb.CreateTaskResponse{}), nil
+}
+
+func RegisterTaskServer(r chi.Router) {
+	path, h := grpc.NewTaskServiceHandler(&TaskServiceServer{})
+	r.Handle(path, h)
 }
