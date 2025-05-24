@@ -2,6 +2,7 @@ package handler
 
 import (
 	"context"
+
 	"github.com/bufbuild/connect-go"
 
 	"buf-validate-example/internal/application/service"
