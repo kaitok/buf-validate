@@ -274,7 +274,7 @@ var File_v1_task_proto protoreflect.FileDescriptor
 
 const file_v1_task_proto_rawDesc = "" +
 	"\n" +
-	"\rv1/task.proto\x12\atask.v1\x1a\x1fgoogle/protobuf/timestamp.proto\"\xf5\x01\n" +
+	"\rv1/task.proto\x12\x04task\x1a\x1fgoogle/protobuf/timestamp.proto\"\xf5\x01\n" +
 	"\x04Task\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x05R\x02id\x12\x14\n" +
 	"\x05title\x18\x03 \x01(\tR\x05title\x12 \n" +
@@ -291,13 +291,15 @@ const file_v1_task_proto_rawDesc = "" +
 	"\x06status\x18\x03 \x01(\tR\x06status\x12\x17\n" +
 	"\auser_id\x18\x04 \x01(\x05R\x06userId\"0\n" +
 	"\x15GetTasksByUserRequest\x12\x17\n" +
-	"\auser_id\x18\x01 \x01(\x05R\x06userId\"=\n" +
-	"\x16GetTasksByUserResponse\x12#\n" +
-	"\x05tasks\x18\x01 \x03(\v2\r.task.v1.TaskR\x05tasks2\x98\x01\n" +
-	"\vTaskService\x127\n" +
+	"\auser_id\x18\x01 \x01(\x05R\x06userId\":\n" +
+	"\x16GetTasksByUserResponse\x12 \n" +
+	"\x05tasks\x18\x01 \x03(\v2\n" +
+	".task.TaskR\x05tasks2\x8c\x01\n" +
+	"\vTaskService\x121\n" +
 	"\n" +
-	"CreateTask\x12\x1a.task.v1.CreateTaskRequest\x1a\r.task.v1.Task\x12P\n" +
-	"\rGetTaskByUser\x12\x1e.task.v1.GetTasksByUserRequest\x1a\x1f.task.v1.GetTasksByUserResponseB\tZ\av1/taskb\x06proto3"
+	"CreateTask\x12\x17.task.CreateTaskRequest\x1a\n" +
+	".task.Task\x12J\n" +
+	"\rGetTaskByUser\x12\x1b.task.GetTasksByUserRequest\x1a\x1c.task.GetTasksByUserResponseB\x14Z\x12tools/grpc/v1/taskb\x06proto3"
 
 var (
 	file_v1_task_proto_rawDescOnce sync.Once
@@ -313,20 +315,20 @@ func file_v1_task_proto_rawDescGZIP() []byte {
 
 var file_v1_task_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_v1_task_proto_goTypes = []any{
-	(*Task)(nil),                   // 0: task.v1.Task
-	(*CreateTaskRequest)(nil),      // 1: task.v1.CreateTaskRequest
-	(*GetTasksByUserRequest)(nil),  // 2: task.v1.GetTasksByUserRequest
-	(*GetTasksByUserResponse)(nil), // 3: task.v1.GetTasksByUserResponse
+	(*Task)(nil),                   // 0: task.Task
+	(*CreateTaskRequest)(nil),      // 1: task.CreateTaskRequest
+	(*GetTasksByUserRequest)(nil),  // 2: task.GetTasksByUserRequest
+	(*GetTasksByUserResponse)(nil), // 3: task.GetTasksByUserResponse
 	(*timestamppb.Timestamp)(nil),  // 4: google.protobuf.Timestamp
 }
 var file_v1_task_proto_depIdxs = []int32{
-	4, // 0: task.v1.Task.created_at:type_name -> google.protobuf.Timestamp
-	4, // 1: task.v1.Task.updated_at:type_name -> google.protobuf.Timestamp
-	0, // 2: task.v1.GetTasksByUserResponse.tasks:type_name -> task.v1.Task
-	1, // 3: task.v1.TaskService.CreateTask:input_type -> task.v1.CreateTaskRequest
-	2, // 4: task.v1.TaskService.GetTaskByUser:input_type -> task.v1.GetTasksByUserRequest
-	0, // 5: task.v1.TaskService.CreateTask:output_type -> task.v1.Task
-	3, // 6: task.v1.TaskService.GetTaskByUser:output_type -> task.v1.GetTasksByUserResponse
+	4, // 0: task.Task.created_at:type_name -> google.protobuf.Timestamp
+	4, // 1: task.Task.updated_at:type_name -> google.protobuf.Timestamp
+	0, // 2: task.GetTasksByUserResponse.tasks:type_name -> task.Task
+	1, // 3: task.TaskService.CreateTask:input_type -> task.CreateTaskRequest
+	2, // 4: task.TaskService.GetTaskByUser:input_type -> task.GetTasksByUserRequest
+	0, // 5: task.TaskService.CreateTask:output_type -> task.Task
+	3, // 6: task.TaskService.GetTaskByUser:output_type -> task.GetTasksByUserResponse
 	5, // [5:7] is the sub-list for method output_type
 	3, // [3:5] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name

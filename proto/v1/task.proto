@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package task.v1;
-
-option go_package = "v1/task";
+package task;
 
 import "google/protobuf/timestamp.proto";
+
+option go_package = "tools/grpc/v1/task";
 
 message Task {
   int32 id = 1;

@@ -207,7 +207,7 @@ var File_v1_user_proto protoreflect.FileDescriptor
 
 const file_v1_user_proto_rawDesc = "" +
 	"\n" +
-	"\rv1/user.proto\x12\auser.v1\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1bbuf/validate/validate.proto\"\xb0\x02\n" +
+	"\rv1/user.proto\x12\auser.v1\x1a\x1bbuf/validate/validate.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xb0\x02\n" +
 	"\x04User\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x05R\x02id\x12\x12\n" +
 	"\x04uuid\x18\x02 \x01(\tR\x04uuid\x12\x1d\n" +
@@ -223,7 +223,7 @@ const file_v1_user_proto_rawDesc = "" +
 	"\x0fGetUserResponse\x12!\n" +
 	"\x04user\x18\x01 \x01(\v2\r.user.v1.UserR\x04user2K\n" +
 	"\vUserService\x12<\n" +
-	"\aGetUser\x12\x17.user.v1.GetUserRequest\x1a\x18.user.v1.GetUserResponseB\tZ\av1/userb\x06proto3"
+	"\aGetUser\x12\x17.user.v1.GetUserRequest\x1a\x18.user.v1.GetUserResponseB\x14Z\x12tools/grpc/v1/userb\x06proto3"
 
 var (
 	file_v1_user_proto_rawDescOnce sync.Once
