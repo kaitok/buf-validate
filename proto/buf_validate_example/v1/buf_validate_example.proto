@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package buf_validate_example.v1;
+
+import "google/protobuf/timestamp.proto";
+
+message Task {
+  int32 id = 1;
+  string title = 3;
+  string description = 4;
+  string status = 5;
+  string user_id = 6;
+  google.protobuf.Timestamp created_at = 7;
+  google.protobuf.Timestamp updated_at = 8;
+}
+
+message CreateTaskRequest {
+  string title = 1;
+  string description = 2;
+  string status = 3;
+  int32 user_id = 4;
+}
+
+message CreateTaskResponse {
+  Task task = 1;
+}
+
+message GetTaskByUserRequest {
+  int32 user_id = 1;
+}
+
+message GetTaskByUserResponse {
+  repeated Task tasks = 1;
+}
+
+service TaskService {
+  rpc CreateTask(CreateTaskRequest) returns (CreateTaskResponse);
+  rpc GetTaskByUser(GetTaskByUserRequest) returns (GetTaskByUserResponse);
+}
+
+message User {
+  int32 id = 1;
+  string uuid = 2;
+  string email = 3;
+  string username = 4;
+  string password = 5;
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
+}
+
+message GetUserRequest {
+  int32 id = 1;
+}
+
+message GetUserResponse {
+  User user = 1;
+}
+
+service UserService {
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+}

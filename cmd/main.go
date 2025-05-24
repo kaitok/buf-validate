@@ -1,14 +1,14 @@
 package main
 
 import (
-	"buf-validate-example/internal/interface/grpc/handler"
-	taskpb "buf-validate-example/tools/grpc/v1/task"
-	userpb "buf-validate-example/tools/grpc/v1/user"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"buf-validate-example/internal/interface/grpc/handler"
+	grpc "buf-validate-example/tools/grpc/buf_validate_example/v1/buf_validate_examplev1connect"
 )
 
 func main() {
@@ -18,8 +18,8 @@ func main() {
 	go func() {
 		log.Printf("gRPC server (connect-go) listening on %s", grpcPort)
 		mux := http.NewServeMux()
-		mux.Handle(taskpb.NewTaskServiceHandler(&handler.TaskServiceServer{}))
-		mux.Handle(userpb.NewUserServiceHandler(&handler.UserServiceServer{}))
+		mux.Handle(grpc.NewTaskServiceHandler(&handler.TaskServiceServer{}))
+		mux.Handle(grpc.NewUserServiceHandler(&handler.UserServiceServer{}))
 		if err := http.ListenAndServe(grpcPort, mux); err != nil {
 			log.Fatalf("gRPC server error: %v", err)
 		}
