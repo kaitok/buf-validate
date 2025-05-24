@@ -1,8 +1,8 @@
 package service
 
 import (
-	"buf-validate/internal/domain/entity"
-	"buf-validate/internal/domain/repository"
+	"buf-validate-example/internal/domain/entity"
+	"buf-validate-example/internal/domain/repository"
 )
 
 type GetUserUsecase struct {

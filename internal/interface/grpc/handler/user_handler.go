@@ -3,10 +3,10 @@ package handler
 import (
 	"context"
 
-	userpb "buf-validate/tools/grpc/v1/user"
+	userpb "buf-validate-example/tools/grpc/v1/user"
 
-	"buf-validate/internal/application/service"
-	"buf-validate/internal/infrastructure/repository"
+	"buf-validate-example/internal/application/service"
+	"buf-validate-example/internal/infrastructure/repository"
 )
 
 var getUserUsecase = service.GetUserUsecase{

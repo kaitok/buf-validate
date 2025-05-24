@@ -1,4 +1,4 @@
-module buf-validate
+module github.com/kaitok/buf-validate-example
 
 go 1.22
 

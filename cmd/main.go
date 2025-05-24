@@ -1,9 +1,9 @@
 package main
 
 import (
-	"buf-validate/internal/interface/grpc/handler"
-	taskpb "buf-validate/tools/grpc/v1/task"
-	userpb "buf-validate/tools/grpc/v1/user"
+	"buf-validate-example/internal/interface/grpc/handler"
+	taskpb "buf-validate-example/tools/grpc/v1/task"
+	userpb "buf-validate-example/tools/grpc/v1/user"
 	"log"
 	"net/http"
 	"os"

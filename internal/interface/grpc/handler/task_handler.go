@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"buf-validate/internal/application/service"
-	"buf-validate/internal/infrastructure/repository"
-	taskpb "buf-validate/tools/grpc/v1/task"
+	"buf-validate-example/internal/application/service"
+	"buf-validate-example/internal/infrastructure/repository"
+	taskpb "buf-validate-example/tools/grpc/v1/task"
 	"context"
 )
 
